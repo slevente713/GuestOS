@@ -48,7 +48,7 @@ MenuShowDelay: 100
 Registry verzió: 5.00
 Előretelepített alkalmazások: Xtremeshell 5.2, VLC Media Player [EZ A FUNKCIÓ CSAK AKKOR FOG MŰKÖDNI HA HÁLÓZATTAL TELEPíTESZ!]
 
-Version 1.1
+Version 2.0
 
 ReadMe.md
 [CSAK A VÁLTOZÁSOK VANNAK ITT MEGEMLÍTVE, AMI MARADT AZ EREDETI, AZ NINCS MEGEMLÍTVE]
