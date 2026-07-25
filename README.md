@@ -1,5 +1,7 @@
 # GuestOS 3.0: A GuestOS új korszaka.
 
+## FIGYELEM: A Sources mappa a Releases-ben van az ISO-ban, mert nem lehet feltölteni.
+
 ## Rendszerkövetelmények
 
 - Minimum 2 magos CPU,
