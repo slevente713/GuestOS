@@ -14,7 +14,7 @@
 
 ## Fontos információk
 
-- *A telepítéskor, és amikor először jelentkezel be a fiókjaidba, SOHA SEMMIYLEN POWERSHELL ABLAKOT NE ZÁRJ BE! Az autounnatend.xml fájlban látszik mi törtnik a háttérben.*,
+- *A telepítéskor, és amikor először jelentkezel be a fiókjaidba, SOHA SEMMIYLEN POWERSHELL ABLAKOT NE ZÁRJ BE! Az autounattend.xml fájlban látszik mi törtnik a háttérben.*,
 - A pendrive-ot amiről telepítesz csak akkor húzd ki, *HA MÁR AZ ÖSSZES ELŐRETELEPÜLŐ ALKALMAZÁS FELTELEPÜLT!*,
 - A rendszer egy Windows 11 25H2-re épül. Az ISO a Microsoft hovatalos oldaláról lett letöltve.,
 - Az internetkábelt húzd ki mielőtt a telepítőbe boot-olnál, hogy a driverek ne települhessenek maguktól!,
