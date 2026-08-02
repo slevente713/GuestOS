@@ -17,8 +17,8 @@
 ## Fontos információk
 
 - *A telepítéskor, és amikor először jelentkezel be a fiókjaidba, SOHA SEMMIYLEN POWERSHELL ABLAKOT NE ZÁRJ BE! Az autounattend.xml fájlban látszik mi törtnik a háttérben.*,
-- A pendrive-ot amiről telepítesz csak akkor húzd ki, *HA MÁR AZ ÖSSZES ELŐRETELEPÜLŐ ALKALMAZÁS FELTELEPÜLT!*,
-- A rendszer egy Windows 11 25H2-re épül. Az ISO a Microsoft hovatalos oldaláról lett letöltve.,
+- A pendrive-ot amiről telepítesz csak akkor húzd ki, *HA MÁR AZ ÖSSZES ELŐRETELEPÜLŐ ALKALMAZÁS FELTELEPÜLT!* A $OEM$\$$\Setup\Scripts mappában a SetupComplete.cmd fájlban ott van mik települnek előre bizonyítéknak.,
+- A rendszer egy Windows 11 25H2-re épül. Az ISO a Microsoft hivatalos oldaláról lett letöltve.,
 - Az internetkábelt húzd ki mielőtt a telepítőbe boot-olnál, hogy a driverek ne települhessenek maguktól!,
 - A driver-eket rakd a pendrive-ra, és ha végeztél INTERNET NÉLKÜL telepítsd fel őket, és csak utánna csatlakozz az internetre!,
 - A következő driverekre lesz szükséged: Chipset, LAN/Wi-Fi (Attól függően hogy melyiket használod. Ha mindkettőt akkor mindkettőt telepítsd fel!), GPU, Audio (Ha van rendes speaker-ed), Sata (Ha vannak Sata eszközeid), Bluetooth (Ha használod)
