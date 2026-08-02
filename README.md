@@ -1,6 +1,6 @@
 # GuestOS 3.0: A GuestOS új korszaka.
 
-## FIGYELEM: A Sources mappa a Releases-ben van az ISO-ban, mert nem lehet feltölteni.
+## A Sources mappa és pár telepítő fájl a Releases-ben van az ISO-ban, mert nem lehet feltölteni.
 
 ## Rendszerkövetelmények
 
