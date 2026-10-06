@@ -265,6 +265,8 @@ $selectors = @(
 	'MicrosoftWindowsPowerShellV2Root';
 	'Microsoft-RemoteDesktopConnection';
 	'Recall';
+	'MathInputPanel';
+	'Microsoft-Windows-WordPad';
 );
 $getCommand = {
   Get-WindowsOptionalFeature -Online | Where-Object -Property 'State' -NotIn -Value @(
