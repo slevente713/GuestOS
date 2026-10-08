@@ -71,7 +71,7 @@
 
 ## Adatvédelmi és biztonsági beállítások
 
-- Core Isolation (Virtualization-based security): bekapcsolva,
+- Core Isolation (HVCI) (VBS + Memory integrity): bekapcsolva,
 - BitLocker állapota: alapból letiltva, de bekapcsolható,
 - Telementry: letiltva,
 - Jelszavak lejárata: nincs,
@@ -80,10 +80,14 @@
 - Javaslatok és ajánlatok a Beállításokban: letiltva,
 - Személyre szabott ajánlatok: kikapcsolva,
 - Opcionális diagnosztikai adatok küldése: letiltva,
+- ASR: bekapcsolva,
+- Sebezhető driver tiltólista: bekapcsolva,
+- Windows Defender Cloud Protection (MAPS): bekapcsolva,
+- PUA (Potentially unwanted apps) védelem: bekapcsolva mindenhol,
 - Windows Hello: letiltva, de bekapcsolható, 
 - Kidobás a fiókból: 7 sikertelen próbálkozás után, 15 percig, és a számláló 10 perc után nullázódik,
 - Rendszergazdai fiók zárolásának engedélyezése: bekapcsolva,
-- AppLocker: Alapból kikapcsolva, de bekapcsolva,
+- AppLocker: Alapból kikapcsolva,
 - Smart App Control: kikapcsolva
 
 ## Windows Search
@@ -123,8 +127,7 @@
 ## Előretelepített alkalmazások
 - 7-zip
 - Firefox
-- Visual C++ Redistubulate 2022 (32-bit & 64-bit)
-- PowerShell 7.6.2
+- PowerShell 7.6.6
 - .NET Framework 3.5, 3.0, 2.0
 
 ## Letörölt csomagok
