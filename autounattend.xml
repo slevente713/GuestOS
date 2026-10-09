@@ -88,13 +88,7 @@
 			</FirstLogonCommands>
 		</component>
 	</settings>
-	<Extensions xmlns="https://schneegans.de/windows/unattend-generator/">
-		<Build>
-			<Commit>
-				<Hash>3de37dc6bc9bb1f63aeac7aa137c84c1b30b3b28</Hash>
-				<GitHubUrl>https://github.com/cschneegans/unattend-generator/commit/3de37dc6bc9bb1f63aeac7aa137c84c1b30b3b28</GitHubUrl>
-			</Commit>
-		</Build>
+	<Extensions xmlns="https://github.com/slevente713/GuestOS/">
 		<ExtractScript>
 param(
     [xml] $Document
@@ -515,7 +509,7 @@ rm C:\PerfLogs\*
 rm C:\OneDriveTemp\*
 		</File>
 		<File path="C:\Windows\Setup\Scripts\unattend-03.cmd">
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v VerboseStatus /t REG_WORD /d 1 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v VerboseStatus /t REG_DWORD /d 1 /f
 		</File>
 		<File path="C:\Windows\Setup\Scripts\unattend-04.ps1">
 $services = @(
@@ -528,9 +522,6 @@ $services = @(
     "fhsvc",              # File History
     "TermService",        # Remote Desktop Services
     "SessionEnv",         # Remote Desktop Configuration
-    "RasAuto",            # Remote Access Auto Connection Manager
-    "RasMan",             # Remote Access Connection Manager
-    "TabletInputService", # Touch Keyboard and Handwriting Panel
     "wisvc",              # Windows Insider Service
     "icssvc",             # Windows Mobile Hotspot Service
     "WerSvc",             # Windows Error Reporting Service
@@ -550,6 +541,9 @@ foreach ($service in $services) {
             }
             Set-Service -Name $service -StartupType Disabled
         }
+		catch {
+			Write-Host "Failed to disable $service`: $_" -ForegroundColor Red
+		}
     }
 }
 		</File>
@@ -1009,11 +1003,26 @@ $scripts = @(
 		reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v Enabled /t REG_DWORD /d 1 /f;
 	};
 	{
-		Remove-Item -LiteralPath @(
-		  'C:\Windows\Panther\unattend.xml';
-		  'C:\Windows\Panther\unattend-original.xml';
-		  'C:\Windows\Setup\Scripts\Wifi.xml';
-		) -Force -ErrorAction 'SilentlyContinue' -Verbose;
+		$Host.UI.WriteLine( [ConsoleColor]::Cyan, $Host.UI.RawUI.BackgroundColor, 'Please choose a browser that you want to install!' );
+		$Host.UI.WriteLine( '[1] Firefox (Default)' );
+		$Host.UI.WriteLine( '[2] Microsoft Edge (Windows built-in)' );
+		$Host.UI.WriteLine( '[3] Google Chrome (Needs an internet connection) (Not recommended)' );
+		$Host.UI.WriteLine( '[4] Brave (Needs an internet connection)' );
+		$Host.UI.WriteLine( '[5] Tor Browser (Needs an internet connection)' );
+
+		$timeout = 60;
+		$choice = '';
+		$Host.UI.Write( "Press a key [1-5]. Firefox will be installed automatically in $timeout seconds: " );
+		$Host.UI.RawUI.FlushInputBuffer();
+		$deadline = ( Get-Date ).AddSeconds( $timeout );
+		while( ( Get-Date ) -lt $deadline ) {
+			if( $Host.UI.RawUI.KeyAvailable ) {
+				$choice = $Host.UI.RawUI.ReadKey( 'NoEcho,IncludeKeyDown' ).Character.ToString();
+				$Host.UI.WriteLine( $choice );
+				break;
+			}
+			Start-Sleep -Milliseconds 200;
+		}
 	};
 );
 

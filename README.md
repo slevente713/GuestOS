@@ -17,7 +17,7 @@
 ## Fontos információk
 
 - *A telepítéskor, és amikor először jelentkezel be a fiókjaidba, SOHA SEMMIYLEN POWERSHELL ABLAKOT NE ZÁRJ BE! Az autounattend.xml fájlban látszik mi törtnik a háttérben.*,
-- A pendrive-ot amiről telepítesz csak akkor húzd ki, *HA MÁR AZ ÖSSZES ELŐRETELEPÜLŐ ALKALMAZÁS FELTELEPÜLT!* A $OEM$\$$\Setup\Scripts mappában a SetupComplete.cmd fájlban ott van mik települnek előre bizonyítéknak.,
+- A pendrive-ot amiről telepítesz csak akkor húzd ki, *HA MÁR AZ ÖSSZES ELŐRETELEPÜLŐ ALKALMAZÁS FELTELEPÜLT!* A '$OEM$\$$\Setup\Scripts' mappában a SetupComplete.cmd fájlban ott van mik települnek előre.,
 - A rendszer egy Windows 11 25H2-re épül. Az ISO a Microsoft hivatalos oldaláról lett letöltve.,
 - Az internetkábelt húzd ki mielőtt a telepítőbe boot-olnál, hogy a driverek ne települhessenek maguktól!,
 - A driver-eket rakd a pendrive-ra, és ha végeztél INTERNET NÉLKÜL telepítsd fel őket, és csak utánna csatlakozz az internetre!,
@@ -34,7 +34,7 @@
 
 - Gyors rendszerindítás: letiltva,
 - Hibernálás: letiltva,
-- Verbose logon: Nincs konfigurálva
+- Verbose logon: Bekapcsolva
 
 ## Fájlkezelő beállításai
 
@@ -103,13 +103,9 @@
 - Online fiók létrehozása telepítéskor: letiltva,
 - Csak Offline (Helyi) fiók létrehozása telepítéskor: engedélyezve,
 
-
-## Registry módosítások
-
-- MenuShowDelay: 100
-
 ## Témázással és kinézettel kapcsolatos beállítások
 
+- MenuShowDelay: 100 MS
 - Rendszertéma: Sötét. Szín: Kék (alap) (0, 120, 212),
 - Widgetek: letiltva,
 - Asztalon megjelenített ikonok: Lomtár, Firefox,
@@ -501,9 +497,6 @@
 
 - Remote Desktop Services, 
 - Remote Desktop Configuration, 
-- Remote Access Auto Connection manager,
-- Remote Access Connection manager,
-- Touch Keyboard and Handwriting Panel, 
 - Windows Insider Service,
 - SysMain,
 - Windows Mobile Hotspot manager,
