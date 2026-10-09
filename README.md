@@ -14,7 +14,7 @@
 - UEFI Firmware,
 - GPT partíciós séma,
 - Minimum 1 GHz vagy gyorsabb processzor,
-- WDDM (Windows Display Manager) 2.0 vagy újabb,
+- WDDM (Windows Display Manager) 2.0 vagy újabb kompatibilis GPU,
 - DirectX 12 kompatibilis GPU,
 - 64 GB vagy nagyobb háttértár
 
