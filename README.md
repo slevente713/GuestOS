@@ -1,12 +1,16 @@
-# GuestOS 3.0: A GuestOS új korszaka.
+# GuestOS
 
-## A Sources mappa és pár telepítő fájl a Releases-ben van az ISO-ban, mert nem lehet feltölteni.
+## A Sources mappa Archive-org-on található, mert nem lehet feltölteni.
+
+## Ha ötleteid vannak, jelezd a *Discussions* menün keresztül!
+
+## ISO: *https://archive.org/details/guest-os-3.0-iso*
 
 ## Rendszerkövetelmények
 
 - Minimum 2 magos CPU,
 - 64-bites architektúrájú proceszzor,
-- Egy minimum 8 GB-os pendrive a telepítéshez USB 2.0 vagy gyorsabb sebességekkel,
+- Egy minimum 8 GB-os pendrive a telepítéshez,
 - UEFI Firmware,
 - GPT partíciós séma,
 - Minimum 1 GHz vagy gyorsabb processzor,
@@ -121,10 +125,14 @@
 - Context (jobbklikk) menü: Klasszikus
 
 ## Előretelepített alkalmazások
-- 7-zip
-- Firefox
-- PowerShell 7.6.6
-- .NET Framework 3.5, 3.0, 2.0
+- 7-zip 26.03,
+- PowerShell 7.6.6,
+
+### Opcionális (böngészők):
+- Firefox (Default),
+- Microsoft Edge (Windows Built-in),
+- Google Chrome (Not recommended) (Needs an internet connection),
+- Tor (Needs an internet connection)
 
 ## Letörölt csomagok
 - Microsoft-Windows-GameUX-Package,
@@ -336,7 +344,7 @@
 - XBOX,
 - XPS Megjelenítő / XPS Nézegető
 
-- *Ha valamire szükséged lenne, és a listán van, akkor a Microsoft Store-ból visszatelepítheted, ha ott fent van.*
+- *Ha valamire szükséged lenne, és a listán van, akkor a Microsoft Store-ból / Winget-tel / DISM-mel / WindowsOptionalFeatures-sel visszatelepítheted, ha ott fent van.*
 
 ## Törölt/Letiltott funkciók
 - Printing-XPSServices-Features,
